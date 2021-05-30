@@ -3,10 +3,10 @@ Description=Gunicorn instance to serve landr
 After=network.target
 
 [Service]
-User=sammy
+User=root
 Group=www-data
-WorkingDirectory=/var/www/landr
-ExecStart=gunicorn --workers 2 "landr:create_app()"
+WorkingDirectory=/var/www/sublevel-lime
+ExecStart=gunicorn --workers 2 "sublevel-lime:create_app()"
 
 [Install]
 WantedBy=multi-user.target
