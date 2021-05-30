@@ -1,0 +1,12 @@
+[Unit]
+Description=Gunicorn instance to serve landr
+After=network.target
+
+[Service]
+User=sammy
+Group=www-data
+WorkingDirectory=/var/www/landr
+ExecStart=gunicorn --workers 2 "landr:create_app()"
+
+[Install]
+WantedBy=multi-user.target
