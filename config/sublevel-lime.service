@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=root
 Group=www-data
-WorkingDirectory=/var/www/sublevel-lime
+WorkingDirectory=/var/www
 ExecStart=gunicorn --workers 2 "sublevel-lime:create_app()"
 
 [Install]
